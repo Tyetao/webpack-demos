@@ -1,0 +1,38 @@
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=development webpack --progress --hide-modules --config webpack.prod.js",
+    "watch": "cross-env NODE_ENV=development webpack-dev-server --progress --config webpack.dev.js",
+    "dev": "cross-env NODE_ENV=development webpack --progress --display-modules --config webpack.dev.js",
+    "server": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
+    "cross-env": "^5.1.4",
+    "css-loader": "^0.28.11",
+    "express": "^4.16.3",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.0.7",
+    "style-loader": "^0.20.3",
+    "uglifyjs-webpack-plugin": "^1.2.4",
+    "url-loader": "^1.0.1",
+    "vue-loader": "^14.2.1",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^3.11.0",
+    "webpack-cli": "^2.0.12",
+    "webpack-dev-middleware": "^3.0.1",
+    "webpack-dev-server": "^2.9.7",
+    "webpack-merge": "^4.1.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.5",
+    "vue": "^2.5.16"
+  }
+}
