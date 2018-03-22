@@ -1,8 +1,6 @@
 <template>
   <section>
-    <!-- <my-table id="out-table"></my-table> -->
-    <button @click="exportExcel">导出</button>
-     <table   id="datatable" border="1" width="100%">
+    <table border="1" width="100%">
       <thead>
        <tr>
          <th rowspan="2">类别</th> 
@@ -73,31 +71,15 @@
         </tr>
       </tbody>
     </table>
-    <a @click="exportExcel($event);">Export to Excel</a>
   </section>
 </template>
 
 <script>
-import ExcellentExport from 'excellentexport';
 export default {
-  name: "App",
-  components: {
-    // MyTable
-  },
-  methods: {
-    exportExcel(event) {
-      console.log(event.currentTarget);
-     ExcellentExport.excel(event.currentTarget, 'datatable', 'Sheet Name Here');
-    }
-  },
-  mounted() {
-    console.log(ExcellentExport.excel);
-  }
+  name: "MyTable"
 };
 </script>
 
 <style scoped>
-.app {
-  transform: rotate(1deg);
-}
+
 </style>
