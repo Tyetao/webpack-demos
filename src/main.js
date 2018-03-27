@@ -1,11 +1,18 @@
 import Vue from 'vue';
-import App from './App.vue';
+import App from './App';
+import router from './router';
 
-import './assets/css/style.css';
+import './assets/css/ionicons';
+import './assets/css/style';
 
-const root = document.createElement('div');
-document.body.appendChild(root);
+router.beforeEach((to, from, next) => {
+  console.log(1);
+  next();
+});
 
-new Vue({
-  render: (h) => h(App)
-}).$mount(root);
+window.app = new Vue({
+  el: '#app',
+  router,
+  template: '<App/>',
+  components: { App }
+});
