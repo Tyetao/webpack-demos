@@ -1,10 +1,9 @@
 const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
-function resolve(dir) {
-  return path.join(__dirname, '..', dir)
+function resolve (dir) {
+  return path.join(__dirname, '..', dir);
 }
 
 module.exports = {
@@ -17,7 +16,7 @@ module.exports = {
     path: resolve('dist')
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json', '.css'],
+    extensions: ['.js', '.vue', '.json', '.scss'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
@@ -40,7 +39,7 @@ module.exports = {
       loader: 'vue-loader'
     }, {
       test: /\.js$/,
-      loader: "babel-loader",
+      loader: 'babel-loader',
       include: [resolve('src'), resolve('node_modules/webpack-dev-server/client')]
     }, {
       test: /\.(png|svg|jpg|jpeg|gif)$/,
@@ -62,7 +61,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'webpack',
       template: 'index.html'
-    }),
+    })
     // new BundleAnalyzerPlugin()
   ]
 };

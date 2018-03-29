@@ -1,0 +1,13 @@
+body{
+  font-size: 12px;
+  color: #495060;
+  line-height: 1.5;
+}
+.t-icon {
+  font-size: 14px;
+  margin-right: 4px;
+  color: #495060;
+  &:hover {
+    color: black;
+  }
+}
