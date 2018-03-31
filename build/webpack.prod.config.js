@@ -5,7 +5,7 @@ const common = require('./webpack.common.config');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = merge(common, {
-  devtool: 'source-map',
+  // devtool: 'source-map',
   module: {
     rules: [{
       test: /\.scss$/,
@@ -19,9 +19,10 @@ module.exports = merge(common, {
     }]
   },
   plugins: [
-    new UglifyJSPlugin({
-      sourceMap: true
-    }),
+    new UglifyJSPlugin(),
+    // new UglifyJSPlugin({
+    //   sourceMap: true
+    // }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
     }),

@@ -1,18 +1,35 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-import Layout from '~/Layout';
-import dashboard from '@/views/dashboard';
-
 Vue.use(Router);
 
 const routes = [{
   path: '/',
-  component: Layout,
+  component: () => import('~/Layout'),
   children: [
     {
       path: '',
-      component: dashboard
+      component: () => import('@/views/dashboard')
+    }
+  ]
+},
+{
+  path: '/a',
+  component: () => import('~/Layout'),
+  children: [
+    {
+      path: '',
+      component: () => import('@/views/a')
+    }
+  ]
+},
+{
+  path: '/b',
+  component: () => import('~/Layout'),
+  children: [
+    {
+      path: '',
+      component: () => () => import('@/views/b')
     }
   ]
 }];
