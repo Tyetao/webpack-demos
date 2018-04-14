@@ -68,6 +68,9 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+  .modal-container .modal-header[data-v-d0325b66]{
+    text-align: left;
+  }
   .block{
     margin-top: 20px;
   }

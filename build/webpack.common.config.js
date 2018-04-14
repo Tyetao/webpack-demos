@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const webpack = require('webpack');
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+// const webpack = require('webpack');
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir);
@@ -66,10 +66,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'webpack',
       template: 'index.html'
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: ['app', 'moment', 'polyfill', 'vue']
-    }),
-    new BundleAnalyzerPlugin()
+    })
+    // new webpack.optimize.CommonsChunkPlugin({
+    //   name: ['app', 'moment', 'polyfill', 'vue']
+    // }),
+    // new BundleAnalyzerPlugin()
   ]
 };
